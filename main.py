@@ -76,7 +76,7 @@ def test():
 
     print("PyTorch Version:", torch.__version__)
     print("CUDA Version: ", torch.version.cuda)
-    device = torch.device("xpu")
+    device = torch.device("cuda")
     print("PyTorch Device:", device, "\n")
 
     # Increase the number of rows until it fails
@@ -89,7 +89,7 @@ def test():
             import intel_extension_for_pytorch as ipex
             torch.xpu.empty_cache()
         except:
-            traceback.print_exc()
+            pass
 
         if p.exitcode != 0:
             break
