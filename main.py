@@ -76,7 +76,7 @@ def test():
 
     print("PyTorch Version:", torch.__version__)
     print("CUDA Version: ", torch.version.cuda)
-    device = torch.device("cuda")
+    device = torch.device("cpu")
     print("PyTorch Device:", device, "\n")
 
     # Increase the number of rows until it fails
